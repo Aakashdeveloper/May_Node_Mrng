@@ -1,0 +1,73 @@
+Single Thread Async Non Blocking I/O
+CallBack
+
+
+Npm> Node Package Manager
+Open Source Scripting
+
+body-parser
+redis
+
+> Local Package > Local to the folder
+
+> Global Package > Local to system
+
+
+JSON > Wayy to represent data
+[
+    {
+        "name":"John",
+        "rollno":1
+    },
+    {
+        "name":"Zoe",
+        "rollno":2
+    }
+]
+//////////////////////////
+Step to create package.json
+/////////////////////////
+>Meta Data/ Entry Point
+
+**NodejS must be installed
+> Naviagate to folder where we want to create package.json using cmd
+> npm init 
+> Answer all questiion
+> Type "yes"
+
+
+> npm init -y 
+
+//////////////////////////
+Step to install Local Package
+/////////////////////////
+
+> Naviagate to folder where we want to install using cmd
+> npm i packagename / npm install packagename
+
+
+//////////////////////////
+Step to install Global Package
+/////////////////////////
+> To run application in CD/production Mode
+> nodemon
+
+#Win
+> Run cmd as admin
+> npm i -g nodemon
+
+#mac
+> Open terminal
+> sudo npm i -g nodemon
+
+
+>>>>>>>>><<<<<<<<
+Create Node Appp
+>>>>>>>>><<<<<<<<
+/////One Time ///////
+> npm i -g @aakasshdeveloper/create-node-app
+> generate
+> node-app
+> myapp
+> cd myapp
+> npm start

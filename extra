@@ -115,3 +115,16 @@ Create Node Appp
 > myapp
 > cd myapp
 > npm start
+
+
+lodash
+
+//////For CD/////
+npm i -g nodemon
+
+
+CRUD
+Create = Post
+Read   = Get
+Update = Put/Patch
+Delete = delete

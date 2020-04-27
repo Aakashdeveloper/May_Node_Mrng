@@ -16,3 +16,13 @@ Math.floor(Math.random()*(max-min))+min
 
 
 Math.floor(Math.random()*(99-1))+1
+
+
+
+var a = 10
+
+//es5
+var b = "my age is "+a
+
+//es6
+var b = `my age is ${a}`

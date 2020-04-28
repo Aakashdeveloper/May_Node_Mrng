@@ -35,8 +35,10 @@ https://github.com/ 
 https://nodejs.org/en/
 
 ////////
-Express
-Route
+City Page 
+Setup of Mongo
+Insert
+Select
 ///////
 
 
@@ -128,3 +130,9 @@ Create = Post
 Read   = Get
 Update = Put/Patch
 Delete = delete
+
+EJS
+Vash
+Swig
+handlebar
+pug

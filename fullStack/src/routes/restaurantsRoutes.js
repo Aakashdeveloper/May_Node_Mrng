@@ -2,7 +2,7 @@ var express = require('express');
 var restaurantRouter = express.Router();
 
 var restaurants = [
-    {
+{
 	"id" : "6360",
 	"name" : "Gulab",
 	"city" : "Delhi",
@@ -156,15 +156,24 @@ var restaurants = [
 }
 ]
 
-restaurantRouter.route('/')
-	.get(function(req,res){
-		//res.status(200).send(restaurants)
-		res.render('restaurants',{title:'Restaurants List',restaurants:restaurants})
-	})
+function router(menu){
 
-restaurantRouter.route('/details')
-	.get(function(req,res){
-		res.status(200).send("Restaurants details")
-    })
+	restaurantRouter.route('/')
+		.get(function(req,res){
+			console.log("i in in default")
+			//res.status(200).send(restaurants)
+			res.render('restaurants',{title:'Restaurants List',restaurants:restaurants,menulist:menu})
+		})
 
-module.exports = restaurantRouter
+	restaurantRouter.route('/details/:id')
+		.get(function(req,res){
+			//var id = req.params.id;
+			var {id} = req.params
+			res.render('restaurantDetail',{title:`Restaurants No ${id}`,menulist:menu})
+		})
+
+	return restaurantRouter
+
+}
+
+module.exports = router

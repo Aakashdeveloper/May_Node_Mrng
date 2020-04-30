@@ -50,7 +50,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h1><%=title%>
+        <h1><%=restaurants.name%>
           <p class="lead"></p>
         </h1>
       </div>
@@ -86,7 +86,28 @@
       <div class="panel">
         <div class="panel-body">
           
-          
+           <!--/stories-->
+            <div class="row">    
+              <br>
+              <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-title" href="#"><img alt="" src="<%=restaurants.thumb%>" style="width:100px;height:100px" class="img-circle"></a>
+              </div>
+              <div class="col-md-10 col-sm-9">
+                <h3><%=restaurants.name%></h3>
+                <div class="row">
+                  <div class="col-xs-9">
+                    <h4><span class="label label-default"><%=restaurants.city%></span></h4><h4>
+                    <p style="font-family:courier,'new courier';" class="text-muted"><%=restaurants.locality%></p>
+                    <p style="font-family:courier,'new courier';" class="text-muted"><%=restaurants.rating_text%></p>
+                    <p style="font-family:courier,'new courier';" class="text-muted">Rs. <%=restaurants.min_price%> for 2</p>
+                    </h4></div>
+                  <div class="col-xs-3"></div>
+                </div>
+                <br><br>
+              </div>
+            </div>
+            <hr>
+            <!--/stories-->
          
           
           

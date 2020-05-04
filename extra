@@ -8,14 +8,14 @@ Basic JavaScript
 NPM
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
-----------------------------------------
 Third Party Api (Weather Api)
 Redis
+----------------------------------------
+Email With Node(Sendgrid)
+Oauth(with github)
 MongoDb Basic
 Api with NodeJS(Rest)
 DashBoard(Crud)
-Email With Node(Sendgrid)
-Oauth(with github)
 OO_NodeJs
 Login/Logout(JWT)
 NodeJs with postgres
@@ -192,3 +192,24 @@ linux
 
 Default Port
 (27017)
+
+
+@babel
+npm i @babel/core @babel/preset-env @babel/register
+
+
+//////Github////////
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/testrepo.git
+git push -u origin master
+
+//--------------//
+git add .
+git commit -m "first commit"
+git push
+
+
+git checkout -b myfeature
+git push -u origin myfeature

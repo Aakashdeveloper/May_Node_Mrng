@@ -26,3 +26,14 @@ var b = "my age is "+a
 
 //es6
 var b = `my age is ${a}`
+
+
+///es5
+function add(a,b){
+    return a+b
+}
+add(1,2)
+
+//Es6
+const add = (a,b) => {return a+b}
+add(1,2)

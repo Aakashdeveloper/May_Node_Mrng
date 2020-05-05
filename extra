@@ -10,8 +10,8 @@ Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
 Third Party Api (Weather Api)
 Redis
-----------------------------------------
 Email With Node(Sendgrid)
+----------------------------------------
 Oauth(with github)
 MongoDb Basic
 Api with NodeJS(Rest)
@@ -213,3 +213,12 @@ git push
 
 git checkout -b myfeature
 git push -u origin myfeature
+
+
+Crud
+Create   > Post
+Read     > Get
+Update   > Put
+Deletee  > Delete
+
+ npm i express cors body-parser mongodb

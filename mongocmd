@@ -241,3 +241,94 @@ db.zomato.insertMany(
 ]
 
 )
+
+
+
+
+ db.maynode.insertMany([
+    {
+        "_id": 1,
+        "name": "Ankit",
+        "city": "Delhi",
+        "phone": 65478688,
+        "isActive":true
+    },
+    {
+        "_id": 2,
+        "name": "Aakash",
+        "city": "Delhi",
+        "phone": 65478688,
+         "isActive":true
+    },
+    {
+        "_id": 3,
+        "name": "Zoe",
+        "city": "Paris",
+        "phone": 87976768,
+         "isActive":false
+    },
+    {
+        "_id": 4,
+        "name": "Ammy",
+        "city": "Paris",
+        "phone": 34334676,
+         "isActive":true
+    },
+    {
+        "_id": 5,
+        "name": "John",
+        "city": "Newyork",
+        "phone": 134334676,
+         "isActive":true
+    }
+])
+
+db.books.insertMany([
+  {
+    "_id" : 1,
+    "item" : "TBD",
+    "stock" : 0,
+    "info" : { "publisher" : "1111", "pages" : 430 },
+    "tags" : [ "technology", "computer" ],
+    "ratings" : [ { "by" : "ijk", "rating" : 4 }, { "by" : "lmn", "rating" : 5 } ],
+    "reorder" : false
+   }
+]);
+
+{
+	"_id" : 1,
+	"item" : "ABC123",
+	"stock" : 0,
+	"info" : {
+		"publisher" : "2222",
+		"pages" : 430
+	},
+	"tags" : [
+		"software"
+	],
+	"ratings" : [
+		{
+			"by" : "ijk",
+			"rating" : 4
+		},
+		{
+			"by" : "xyz",
+			"rating" : 3
+		}
+	],
+	"reorder" : false
+}
+
+
+db.books.update(
+   { _id: 1 },
+   {
+     $set: {
+       item: "ABC123",
+       "info.publisher": "2222",
+       tags: [ "software" ],
+       "ratings.1": { by: "xyz", rating: 3 }
+     }
+   },
+   {upsert:true}
+)

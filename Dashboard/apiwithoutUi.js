@@ -9,23 +9,12 @@ const mongourl ="mongodb://localhost:27017";
 let db;
 let col_name = "maynode";
 
-app.use(express.static(__dirname+'/public'))
-app.set('views','./src/views');
-app.set('view engine','ejs')
 app.use(cors())
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json())
 
 app.get('/',(req,res)=>{
-    db.collection(col_name).find({isActive:true}).toArray((err,result)=>{
-        if(err) throw err;
-        res.render('index',{data:result})
-    })
-})
-
-app.get('/new',(req,res)=>{
-    var id = Math.floor(Math.random()*10000)
-    res.render('admin',{id:id})
+    res.status(200).send('Health Check')
 })
 
 // Select

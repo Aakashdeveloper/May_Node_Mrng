@@ -47,11 +47,18 @@ app.get('/users',(req,res)=>{
 // Insert
 app.post('/addUser',(req,res)=>{
     console.log(req.body)
-    db.collection(col_name).insert(req.body,(err,result) => {
+    var data = {
+        "_id":parseInt(req.body._id),
+        "name":req.body.name,
+        "city":req.body.city,
+        "phone":parseInt(req.body.phone),
+        "isActive":true
+    }
+    db.collection(col_name).insert(data,(err,result) => {
         if(err){
             throw err
         }else{
-            res.send('Data Added')
+            res.redirect('/')
         }
     })
 })
@@ -61,7 +68,7 @@ app.post('/addUser',(req,res)=>{
 //Update
 app.put('/updateUser',(req,res) => {
     db.collection(col_name).update(
-        { _id: req.body._id },
+        { _id: parseInt(req.body._id) },
         {
           $set: {
             name: req.body.name,

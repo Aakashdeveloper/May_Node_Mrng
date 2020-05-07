@@ -53,8 +53,8 @@
                             <td>
                                 <button type="button" class="edit btn btn-warning"
                                  data-toggle="modal" data-target="#myModal"
-                                 id="<%=data[i].id%>">Edit</button>
-                                <button type="button" class="delete btn btn-danger" id="<%=data[i].id%>">
+                                 id="<%=data[i]._id%>">Edit</button>
+                                <button type="button" class="delete btn btn-danger" id="<%=data[i]._id%>">
                                     Delete
                                 </button>
                             </td>
@@ -76,7 +76,7 @@
                             <!-- Modal body -->
                             <div class="modal-body">
                                 <form action="/updateUser" method="POST" id="update_user">
-                                    <input type="text" readonly class="form-control" id="update_id"  name="id">
+                                    <input type="text" readonly class="form-control" id="update_id"  name="_id">
                                     <div class="form-group">
                                         <label for="name">Name:</label>
                                         <input type="text" class="form-control" id="update_name" placeholder="Enter First name" name="name" required>
@@ -114,9 +114,9 @@
                     console.log('id is '+id)
                     $.ajax({
                         type: 'get',
-                        url: `/user?id=${id}`,
+                        url: `/users?id=${id}`,
                         success: function(data){
-                              $("#update_id").attr("value", data[0].id);
+                              $("#update_id").attr("value", data[0]._id);
                               $("#update_name").attr("value", data[0].name);
                               $("#update_city").attr("value", data[0].city);
                               $("#update_phone").attr("value", data[0].phone);
@@ -139,7 +139,7 @@
                             data: {"id":id},
                             success: function(data){
                                 console.log('data is '+JSON.stringify(data));
-                                //window.location.reload()
+                                window.location.reload()
                             },
                             error: function(){
                                 alert('No data');

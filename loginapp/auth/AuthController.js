@@ -5,6 +5,7 @@ var jwt = require('jsonwebtoken');
 var config = require('../config');
 var bcrypt = require('bcryptjs');
 var User = require('./user');
+var Address = require('./Address')
 var cors = require('cors')
 
 router.use(bodyParser.urlencoded({extended:false}));

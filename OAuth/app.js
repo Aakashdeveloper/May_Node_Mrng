@@ -16,6 +16,7 @@ app.get('/', (req,res) => {
 app.get('/profile',(req,res) => {
     //const code = req.query.code
     const {code} = req.query
+    console.log("value of code is "+code)
     if(!code){
         res.send({
             success:false,

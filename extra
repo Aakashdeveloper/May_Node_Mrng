@@ -19,8 +19,8 @@ Node-Es6(.babel)
 Login/Logout(JWT)
 OO_NodeJs
 NodeJs with postgres
-----------------------------------------
 GraphQl API
+----------------------------------------
 ChatApp
 ---------------
 Testing
@@ -226,3 +226,21 @@ Deletee  > Delete
 
  npm i express cors body-parser mongodb
 
+
+npm i graphql lodash express axios cors express-graphql
+
+
+npm i -g json-server
+json-server --watch db.json --port 8900
+
+///query
+{
+  product(id:3){
+    name
+    aggregate_rating,
+    thumb,
+    city
+  }
+}
+
+//mutation

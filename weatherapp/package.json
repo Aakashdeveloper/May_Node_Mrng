@@ -4,8 +4,8 @@
   "description": "this is weather app",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node start.js",
+    "dev": "nodemon start.js"
   },
   "keywords": [
     "node",

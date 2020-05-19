@@ -20,14 +20,14 @@ Login/Logout(JWT)
 OO_NodeJs
 NodeJs with postgres
 GraphQl API
+Testing
+Production Pm2
+Docker
 ----------------------------------------
 ChatApp
 ---------------
-Testing
---------------
-Production Pm2
 Nginx
-Docker
+
 
 
 
@@ -244,3 +244,16 @@ json-server --watch db.json --port 8900
 }
 
 //mutation
+
+
+ npm i mocha chai chai-http
+
+
+ npm i -g pm2
+ > pm2 start app.js 
+ > pm2 list 
+ > pm2 stop app.js
+
+docker build . -t maynode
+docker image ls 
+docker run -p 8989:7899 maynode

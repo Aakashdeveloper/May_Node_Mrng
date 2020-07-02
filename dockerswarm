@@ -1,0 +1,30 @@
+>> Manger Node
+docker sawrm init --advertise-addr  192.168.0.104
+In Return you will get key
+ docker swarm join --token SWMTKN-1-2zqlcq9pwj0q2leo26at4jsj1wlot1k8o757cnac3diziuhz00-25r9q6r71w46awn1uvwungwov 192.168.0.104:2377
+
+> In Node 1
+ docker swarm join --token SWMTKN-1-2zqlcq9pwj0q2leo26at4jsj1wlot1k8o757cnac3diziuhz00-25r9q6r71w46awn1uvwungwov 192.168.0.104:2377
+
+
+ > Node 2 
+  docker swarm join --token SWMTKN-1-2zqlcq9pwj0q2leo26at4jsj1wlot1k8o757cnac3diziuhz00-25r9q6r71w46awn1uvwungwov 192.168.0.104:2377
+
+  >In Master
+  docker node ls
+  ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
+rlstdfz6u33vr16hb8l6q5wrx *   docker-desktop      Ready               Active              Leader              19.03.8
+rlstdfz6u33vr16hb8l6q5wrx *   docker-desktop      Ready               Active              Node1               19.03.8
+rlstdfz6u33vr16hb8l6q5wrx *   docker-desktop      Ready               Active              Node2              19.03.8
+
+> In Manager Node
+docker service create --name 'maynode' -p 8989:7899 myapp1
+
+> docker service ls
+
+> We will able to run applicatiion on all servers
+but pod is just running in master
+
+> docker service rm maynode
+///////////////////////////
+> docker service create --name 'maynode' -p 8989:7899 --mode global myapp1
